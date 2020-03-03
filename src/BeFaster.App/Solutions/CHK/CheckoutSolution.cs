@@ -6,7 +6,12 @@ namespace BeFaster.App.Solutions.CHK
     {
         public static int ComputePrice(string skus)
         {
-            throw new SolutionNotImplementedException();
+            int checkoutAmount = 0;
+            foreach (char c in skus)
+            { 
+
+            }
         }
     }
 }
+
