@@ -27,7 +27,7 @@ namespace BeFaster.App.Solutions.CHK
             { 
                 B_count = B_count - (E_count / 2);
             }
-            if(F_count > 0)
+            if(F_count >= 3)
             {
                 F_count = F_count - (F_count / 3);
             }
@@ -39,9 +39,11 @@ namespace BeFaster.App.Solutions.CHK
             checkoutAmount = checkoutAmount + (C_count * 20);
             checkoutAmount = checkoutAmount + (D_count * 15);
             checkoutAmount = checkoutAmount + (E_count * 40);
+            checkoutAmount = checkoutAmount + (F_count * 10);
             return checkoutAmount;
         }
     }
 }
+
 
 
