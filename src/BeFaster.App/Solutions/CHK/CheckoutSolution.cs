@@ -99,7 +99,6 @@ namespace BeFaster.App.Solutions.CHK
 
             checkoutAmount = checkoutAmount + (S_count * 20);
             checkoutAmount = checkoutAmount + (T_count * 20);
-            
             checkoutAmount = checkoutAmount + (X_count * 17);
             checkoutAmount = checkoutAmount + (Y_count * 20);
             checkoutAmount = checkoutAmount + (Z_count * 21);
@@ -107,6 +106,7 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
 
