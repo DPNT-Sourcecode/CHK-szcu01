@@ -1,4 +1,5 @@
 ﻿using BeFaster.Runner.Exceptions;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace BeFaster.App.Solutions.CHK
@@ -12,6 +13,11 @@ namespace BeFaster.App.Solutions.CHK
             {
                 return -1;
             }
+            int A_count = skus.Count(v => v == 'A');
+            int B_count = skus.Count(v => v == 'B');
+            int C_count = skus.Count(v => v == 'C');
+            int D_count = skus.Count(v => v == 'D');
+
             //foreach (char c in skus)
             //{
             //    if (c == 'A')
@@ -34,5 +40,6 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
