@@ -13,7 +13,7 @@ namespace BeFaster.App.Solutions.CHK
             {
                 return 0;
             }
-            if (!Regex.IsMatch(skus, @"^[A-D]+$"))
+            if (!Regex.IsMatch(skus, @"^[A-E]+$"))
             {
                 return -1;
             }
@@ -31,4 +31,5 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
