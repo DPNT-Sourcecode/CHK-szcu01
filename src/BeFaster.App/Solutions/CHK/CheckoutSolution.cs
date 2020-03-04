@@ -17,6 +17,8 @@ namespace BeFaster.App.Solutions.CHK
             int B_count = skus.Count(v => v == 'B');
             int C_count = skus.Count(v => v == 'C');
             int D_count = skus.Count(v => v == 'D');
+            checkoutAmount = checkoutAmount + (A_count % 3);
+            checkoutAmount = checkoutAmount * (A_count / 3);
 
             //foreach (char c in skus)
             //{
@@ -40,6 +42,3 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
-
-
-
