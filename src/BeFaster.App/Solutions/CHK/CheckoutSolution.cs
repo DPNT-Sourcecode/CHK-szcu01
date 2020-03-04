@@ -51,6 +51,18 @@ namespace BeFaster.App.Solutions.CHK
             {
                 F_count = F_count - (F_count / 3);
             }
+            if (M_count >= (N_count / 3))
+            {
+                M_count = M_count - (N_count / 3);
+            }
+            if (Q_count >= (R_count / 3))
+            {
+                Q_count = Q_count - (R_count / 3);
+            }
+            if (U_count >= 4)
+            {
+                U_count = U_count - (U_count / 4);
+            }
             checkoutAmount = checkoutAmount + ((A_count / 5) * 200);
             checkoutAmount = checkoutAmount + (((A_count % 5) % 3) * 50);
             checkoutAmount = checkoutAmount + (((A_count % 5) / 3) * 130);
@@ -62,7 +74,9 @@ namespace BeFaster.App.Solutions.CHK
             checkoutAmount = checkoutAmount + (F_count * 10);
 
             checkoutAmount = checkoutAmount + (G_count * 20);
-            checkoutAmount = checkoutAmount + (H_count * 10);
+            checkoutAmount = checkoutAmount + ((H_count / 10) * 80);
+            checkoutAmount = checkoutAmount + (((H_count % 10) % 5) * 10);
+            checkoutAmount = checkoutAmount + (((H_count % 10) / 5) * 45);
             checkoutAmount = checkoutAmount + (I_count * 35);
             checkoutAmount = checkoutAmount + (J_count * 60);
             checkoutAmount = checkoutAmount + (K_count * 80);
@@ -70,13 +84,17 @@ namespace BeFaster.App.Solutions.CHK
             checkoutAmount = checkoutAmount + (M_count * 15);
             checkoutAmount = checkoutAmount + (N_count * 40);
             checkoutAmount = checkoutAmount + (O_count * 10);
-            checkoutAmount = checkoutAmount + (P_count * 50);
-            checkoutAmount = checkoutAmount + (Q_count * 30);
+            checkoutAmount = checkoutAmount + ((P_count % 5) * 50);
+            checkoutAmount = checkoutAmount + ((P_count / 5) * 200);
+            checkoutAmount = checkoutAmount + ((Q_count % 3) * 30);
+            checkoutAmount = checkoutAmount + ((Q_count / 3) * 80);
             checkoutAmount = checkoutAmount + (R_count * 50);
             checkoutAmount = checkoutAmount + (S_count * 30);
             checkoutAmount = checkoutAmount + (T_count * 20);
             checkoutAmount = checkoutAmount + (U_count * 40);
-            checkoutAmount = checkoutAmount + (V_count * 50);
+            checkoutAmount = checkoutAmount + ((V_count / 3) * 130);
+            checkoutAmount = checkoutAmount + (((V_count % 3) % 2) * 50);
+            checkoutAmount = checkoutAmount + (((V_count % 3) / 2) * 90);
             checkoutAmount = checkoutAmount + (W_count * 20);
             checkoutAmount = checkoutAmount + (X_count * 90);
             checkoutAmount = checkoutAmount + (Y_count * 10);
