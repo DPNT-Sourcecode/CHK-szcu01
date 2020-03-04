@@ -9,6 +9,10 @@ namespace BeFaster.App.Solutions.CHK
         public static int ComputePrice(string skus)
         {
             int checkoutAmount = 0;
+            if (string.IsNullOrEmpty(skus))
+            {
+                return 0;
+            }
             if (!Regex.IsMatch(skus, @"^[A-D]+$"))
             {
                 return -1;
@@ -27,3 +31,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
