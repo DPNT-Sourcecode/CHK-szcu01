@@ -111,6 +111,10 @@ namespace BeFaster.App.Solutions.CHK
                 {
                     multibuyCount++;
                 }
+                if(multibuyCount == 3)
+                {
+                    checkoutAmount = checkoutAmount + 45;
+                }
                 if (Y_count > 1)
                 {
                     multibuyCount++;
@@ -129,4 +133,5 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
