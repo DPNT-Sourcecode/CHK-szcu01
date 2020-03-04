@@ -13,7 +13,7 @@ namespace BeFaster.App.Solutions.CHK
             {
                 return 0;
             }
-            if (!Regex.IsMatch(skus, @"^[A-E]+$"))
+            if (!Regex.IsMatch(skus, @"^[A-F]+$"))
             {
                 return -1;
             }
@@ -22,9 +22,14 @@ namespace BeFaster.App.Solutions.CHK
             int C_count = skus.Count(v => v == 'C');
             int D_count = skus.Count(v => v == 'D');
             int E_count = skus.Count(v => v == 'E');
-            if(B_count >= (E_count / 2))
+            int F_count = skus.Count(v => v == 'F');
+            if (B_count >= (E_count / 2))
             { 
                 B_count = B_count - (E_count / 2);
+            }
+            if(F_count > 0 && (F_count % 3 == 0))
+            {
+
             }
             checkoutAmount = checkoutAmount + ((A_count / 5) * 200);
             checkoutAmount = checkoutAmount + (((A_count % 5) % 3) * 50);
@@ -38,3 +43,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
