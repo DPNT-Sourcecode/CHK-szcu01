@@ -90,13 +90,16 @@ namespace BeFaster.App.Solutions.CHK
             checkoutAmount = checkoutAmount + ((Q_count % 3) * 30);
             checkoutAmount = checkoutAmount + ((Q_count / 3) * 80);
             checkoutAmount = checkoutAmount + (R_count * 50);
-            checkoutAmount = checkoutAmount + (S_count * 20);
-            checkoutAmount = checkoutAmount + (T_count * 20);
             checkoutAmount = checkoutAmount + (U_count * 40);
             checkoutAmount = checkoutAmount + ((V_count / 3) * 130);
             checkoutAmount = checkoutAmount + (((V_count % 3) % 2) * 50);
             checkoutAmount = checkoutAmount + (((V_count % 3) / 2) * 90);
             checkoutAmount = checkoutAmount + (W_count * 20);
+
+
+            checkoutAmount = checkoutAmount + (S_count * 20);
+            checkoutAmount = checkoutAmount + (T_count * 20);
+            
             checkoutAmount = checkoutAmount + (X_count * 17);
             checkoutAmount = checkoutAmount + (Y_count * 20);
             checkoutAmount = checkoutAmount + (Z_count * 21);
@@ -104,5 +107,6 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
