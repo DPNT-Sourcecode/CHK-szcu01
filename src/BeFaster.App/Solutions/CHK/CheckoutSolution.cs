@@ -22,17 +22,19 @@ namespace BeFaster.App.Solutions.CHK
             int C_count = skus.Count(v => v == 'C');
             int D_count = skus.Count(v => v == 'D');
             int E_count = skus.Count(v => v == 'E');
-            checkoutAmount = checkoutAmount + ((A_count / 5) * 130);
-            checkoutAmount = checkoutAmount + ((A_count % 3) * 50);
-            checkoutAmount = checkoutAmount + ((A_count / 3) * 130);
+            checkoutAmount = checkoutAmount + ((A_count / 5) * 200);
+            checkoutAmount = checkoutAmount + (((A_count % 5) % 3) * 50);
+            checkoutAmount = checkoutAmount + (((A_count % 5) / 3) * 130);
             checkoutAmount = checkoutAmount + ((B_count % 2) * 30);
             checkoutAmount = checkoutAmount + ((B_count / 2) * 45);
             checkoutAmount = checkoutAmount + (C_count * 20);
             checkoutAmount = checkoutAmount + (D_count * 15);
+            checkoutAmount = checkoutAmount + (E_count * 40);
             return checkoutAmount;
         }
     }
 }
+
 
 
 
