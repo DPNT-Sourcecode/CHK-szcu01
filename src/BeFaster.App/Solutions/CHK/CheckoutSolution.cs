@@ -1,4 +1,5 @@
 ﻿using BeFaster.Runner.Exceptions;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -96,6 +97,8 @@ namespace BeFaster.App.Solutions.CHK
             checkoutAmount = checkoutAmount + (((V_count % 3) / 2) * 90);
             checkoutAmount = checkoutAmount + (W_count * 20);
 
+            List<char> lstChar = new List<char>();
+
             int i = 0;
             int multibuyCount = 0;
             while(i == 0)
@@ -157,3 +160,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
