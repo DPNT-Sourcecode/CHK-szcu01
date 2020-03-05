@@ -118,7 +118,7 @@ namespace BeFaster.App.Solutions.CHK
                 {
                     checkoutAmount = checkoutAmount + 45;
                     multibuyCount = 0;
-                    i = 1;
+                    continue;
                 }
                 if (Y_count > 1)
                 {
@@ -129,7 +129,7 @@ namespace BeFaster.App.Solutions.CHK
                 {
                     checkoutAmount = checkoutAmount + 45;
                     multibuyCount = 0;
-                    i = 1;
+                    continue;
                 }
                 if (Z_count > 1)
                 {
@@ -140,12 +140,12 @@ namespace BeFaster.App.Solutions.CHK
                 {
                     checkoutAmount = checkoutAmount + 45;
                     multibuyCount = 0;
-                    i = 1;
+                    continue;
                 }
-                //if (multibuyCount == 3)
-                //{
-                //    checkoutAmount = checkoutAmount + 45;
-                //}
+                if (multibuyCount < 3)
+                {
+                    checkoutAmount = checkoutAmount + 45;
+                }
             }
             checkoutAmount = checkoutAmount + (S_count * 20);
             checkoutAmount = checkoutAmount + (T_count * 20);
@@ -156,3 +156,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
