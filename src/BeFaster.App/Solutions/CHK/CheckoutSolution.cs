@@ -101,7 +101,7 @@ namespace BeFaster.App.Solutions.CHK
             { 
                 if(S_count > 1)
                 {
-                    multibuyCount++;
+                    multibuyCount = multibuyCount + 1;
                     S_count--;
                 }
                 if (T_count > 1)
@@ -156,5 +156,6 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
