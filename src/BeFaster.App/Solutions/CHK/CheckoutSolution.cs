@@ -98,59 +98,91 @@ namespace BeFaster.App.Solutions.CHK
             checkoutAmount = checkoutAmount + (W_count * 20);
 
             List<char> lstChar = new List<char>();
-
-            int i = 0;
-            int multibuyCount = 0;
-            while(i == 0)
-            { 
-                if(S_count >= 1)
+            
+            //lstChar.Add('S')
+            //int i = 0;
+            //int multibuyCount = 0;
+            List<char> lstMultiBuy = new List<char>();
+            for (int i = 1; i <= S_count; i++)
+            {
+                lstMultiBuy.Add('S');
+            }
+            for (int i = 1; i <= T_count; i++)
+            {
+                lstMultiBuy.Add('T');
+            }
+            for (int i = 1; i <= X_count; i++)
+            {
+                lstMultiBuy.Add('X');
+            }
+            for (int i = 1; i <= Y_count; i++)
+            {
+                lstMultiBuy.Add('Y');
+            }
+            for (int i = 1; i <= Z_count; i++)
+            {
+                lstMultiBuy.Add('Z');
+            }
+            int resetVar = 0;
+            foreach (var item in lstMultiBuy)
+            {
+                resetVar = resetVar + 1;
+                if (resetVar == 3)
                 {
-                    multibuyCount = multibuyCount + 1;
-                    S_count--;
-                }
-                if (T_count >= 1)
-                {
-                    multibuyCount++;
-                    T_count--;
-                }
-                if (X_count >= 1)
-                {
-                    multibuyCount++;
-                    X_count--;
-                }
-                if(multibuyCount == 3)
-                {
+                    resetVar = 0;
                     checkoutAmount = checkoutAmount + 45;
-                    multibuyCount = 0;
-                    continue;
-                }
-                if (Y_count >= 1)
-                {
-                    multibuyCount++;
-                    Y_count--;
-                }
-                if (multibuyCount == 3)
-                {
-                    checkoutAmount = checkoutAmount + 45;
-                    multibuyCount = 0;
-                    continue;
-                }
-                if (Z_count >= 1)
-                {
-                    multibuyCount++;
-                    Z_count--;
-                }
-                if (multibuyCount == 3)
-                {
-                    checkoutAmount = checkoutAmount + 45;
-                    multibuyCount = 0;
-                    continue;
-                }
-                if (multibuyCount < 3)
-                {
-                    i = 1;
                 }
             }
+            //while (i == 0)
+            //{ 
+            //    if(S_count >= 1)
+            //    {
+            //        multibuyCount = multibuyCount + 1;
+            //        S_count--;
+            //    }
+            //    if (T_count >= 1)
+            //    {
+            //        multibuyCount++;
+            //        T_count--;
+            //    }
+            //    if (X_count >= 1)
+            //    {
+            //        multibuyCount++;
+            //        X_count--;
+            //    }
+            //    if(multibuyCount == 3)
+            //    {
+            //        checkoutAmount = checkoutAmount + 45;
+            //        multibuyCount = 0;
+            //        continue;
+            //    }
+            //    if (Y_count >= 1)
+            //    {
+            //        multibuyCount++;
+            //        Y_count--;
+            //    }
+            //    if (multibuyCount == 3)
+            //    {
+            //        checkoutAmount = checkoutAmount + 45;
+            //        multibuyCount = 0;
+            //        continue;
+            //    }
+            //    if (Z_count >= 1)
+            //    {
+            //        multibuyCount++;
+            //        Z_count--;
+            //    }
+            //    if (multibuyCount == 3)
+            //    {
+            //        checkoutAmount = checkoutAmount + 45;
+            //        multibuyCount = 0;
+            //        continue;
+            //    }
+            //    if (multibuyCount < 3)
+            //    {
+            //        i = 1;
+            //    }
+            //}
             checkoutAmount = checkoutAmount + (S_count * 20);
             checkoutAmount = checkoutAmount + (T_count * 20);
             checkoutAmount = checkoutAmount + (X_count * 17);
@@ -160,4 +192,3 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
-
