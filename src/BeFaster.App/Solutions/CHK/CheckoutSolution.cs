@@ -128,6 +128,7 @@ namespace BeFaster.App.Solutions.CHK
             foreach (var item in lstMultiBuy)
             {
                 resetVar = resetVar + 1;
+                threeItems.Add(item);
                 if (resetVar == 3)
                 {
                     resetVar = 0;
@@ -157,7 +158,6 @@ namespace BeFaster.App.Solutions.CHK
                     }
                     threeItems.Clear();
                 }
-                threeItems.Add(item);
             }
             //while (i == 0)
             //{ 
@@ -218,5 +218,6 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
