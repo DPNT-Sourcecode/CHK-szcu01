@@ -103,6 +103,10 @@ namespace BeFaster.App.Solutions.CHK
             //int i = 0;
             //int multibuyCount = 0;
             List<char> lstMultiBuy = new List<char>();
+            for (int i = 1; i <= X_count; i++)
+            {
+                lstMultiBuy.Add('X');
+            }
             for (int i = 1; i <= S_count; i++)
             {
                 lstMultiBuy.Add('S');
@@ -110,10 +114,6 @@ namespace BeFaster.App.Solutions.CHK
             for (int i = 1; i <= T_count; i++)
             {
                 lstMultiBuy.Add('T');
-            }
-            for (int i = 1; i <= X_count; i++)
-            {
-                lstMultiBuy.Add('X');
             }
             for (int i = 1; i <= Y_count; i++)
             {
@@ -218,6 +218,7 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
 
