@@ -134,8 +134,28 @@ namespace BeFaster.App.Solutions.CHK
                     checkoutAmount = checkoutAmount + 45;
                     foreach (var mb_item in threeItems)
                     {
-                        
+                        if (mb_item == 'S')
+                        {
+                            S_count = S_count - 1;
+                        }
+                        if (mb_item == 'T')
+                        {
+                            T_count = T_count - 1;
+                        }
+                        if (mb_item == 'X')
+                        {
+                            X_count = X_count - 1;
+                        }
+                        if (mb_item == 'Y')
+                        {
+                            Y_count = Y_count - 1;
+                        }
+                        if (mb_item == 'Z')
+                        {
+                            Z_count = Z_count - 1;
+                        }
                     }
+                    threeItems.Clear();
                 }
                 threeItems.Add(item);
             }
@@ -198,4 +218,5 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
