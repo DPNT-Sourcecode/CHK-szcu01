@@ -103,10 +103,11 @@ namespace BeFaster.App.Solutions.CHK
             //int i = 0;
             //int multibuyCount = 0;
             List<char> lstMultiBuy = new List<char>();
-            for (int i = 1; i <= X_count; i++)
+            for (int i = 1; i <= Z_count; i++)
             {
-                lstMultiBuy.Add('X');
+                lstMultiBuy.Add('Z');
             }
+            
             for (int i = 1; i <= S_count; i++)
             {
                 lstMultiBuy.Add('S');
@@ -119,9 +120,9 @@ namespace BeFaster.App.Solutions.CHK
             {
                 lstMultiBuy.Add('Y');
             }
-            for (int i = 1; i <= Z_count; i++)
+            for (int i = 1; i <= X_count; i++)
             {
-                lstMultiBuy.Add('Z');
+                lstMultiBuy.Add('X');
             }
             int resetVar = 0;
             List<char> threeItems = new List<char>();
@@ -218,7 +219,3 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
-
-
-
-
