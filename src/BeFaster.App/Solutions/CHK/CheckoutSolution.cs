@@ -124,6 +124,7 @@ namespace BeFaster.App.Solutions.CHK
                 lstMultiBuy.Add('Z');
             }
             int resetVar = 0;
+            List<char> threeItems = new List<char>();
             foreach (var item in lstMultiBuy)
             {
                 resetVar = resetVar + 1;
@@ -131,7 +132,12 @@ namespace BeFaster.App.Solutions.CHK
                 {
                     resetVar = 0;
                     checkoutAmount = checkoutAmount + 45;
+                    foreach (var mb_item in threeItems)
+                    {
+                        
+                    }
                 }
+                threeItems.Add(item);
             }
             //while (i == 0)
             //{ 
@@ -192,3 +198,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
